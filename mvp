@@ -255,6 +255,14 @@ details: "Contact: hello@designsprint.nz<br>Expertise: UI/UX Design, Brand Ident
 isRealDeal: false
 },
 {
+  name: "CodeMentor",
+  category: ["Tech Skills", "Mentorship"],
+  description: "One-on-one mentorship and coding guidance for beginner and intermediate developers.",
+  discount: "15% off on first 3 sessions",
+  details: "Contact: support@codementor.io<br>Expertise: Full-Stack Development, Problem Solving, Career Advice",
+  isRealDeal: false
+}
+{
 name: "StartupBank NZ",
 category: ["Startup Aotearoa exclusive", "Banking"],
 description: "Specialized banking services for startups and small businesses.",
