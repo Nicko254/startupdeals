@@ -160,6 +160,54 @@ discount: "Up to 90% off for eligible startups",
 details: "• Startups with under US$2 million in funding: 90% off in first year, 50% in second, 25% ongoing<br>• Startups who have raised over US$2 million: 50% off in first year, 25% off ongoing",
 isRealDeal: true
 },
+{
+        name: "Microsoft",
+        category: "Cloud Services",
+        description: "Supporting all founders from idea to exit",
+        discount: "Up to US$150,000 in Azure credits",
+        details: "• Up to US$150,000 in Azure credits<br>• Free access to trusted development tools including GitHub<br>• Free collaboration tools including Microsoft Teams",
+        isRealDeal: true
+      },
+      {
+        name: "Orchestra",
+        category: "Stakeholder Management",
+        description: "Easily manage stakeholder relationships and compliance on one platform",
+        discount: "Flat annual fee of $240/year",
+        details: "• Free 1-on-1 ESOP consultation<br>• Flat annual fee of $240/year regardless of the number of stakeholders",
+        isRealDeal: true
+      },
+      {
+        name: "Stripe",
+        category: "Payment Processing",
+        description: "Online payment processing for internet businesses",
+        discount: "Waived fees on next NZ$25,000 in processing",
+        details: "• Waived fees on your next NZ$25,000 in Stripe processing<br>• Access to exclusive Stripe events and product betas<br>• Priority support, guaranteeing faster SLAs for your business",
+        isRealDeal: true
+      },
+      {
+        name: "Zendesk",
+        category: "Customer Support",
+        description: "Make customers happy via text, mobile, phone, email, live chat, social media",
+        discount: "6 months free Zendesk Suite and Sales CRM",
+        details: "• 6 months of Zendesk Suite and Zendesk Sales CRM for free<br>• Onboarding support and office hours with our startups success team<br>• Access to community events and educational resources",
+        isRealDeal: true
+      },
+      {
+        name: "Algolia",
+        category: "Search & Discovery",
+        description: "An API first search and discovery platform",
+        discount: "$10,000 in Algolia credits, valid for 1 year",
+        details: "• $10,000 in Algolia credits, valid for 1 year<br>• Startups should be less than 3 years old<br>• Raised less than $5M in funding",
+        isRealDeal: true
+      },
+      {
+        name: "AWS Activate",
+        category: "Cloud Computing",
+        description: "On-demand cloud computing platforms",
+        discount: "Up to US$100,000 worth of AWS Activate credit",
+        details: "• Receive up to US$100,000 worth of AWS Activate credit and elevated support via AWS Business Support. Credits expire after 1 or 2 years<br>• For Series A and earlier startups<br>• Receive also AWS Business or AWS Developer Support for 1 year from AWS experts, including architectural guidance and best practices as you build and test",
+        isRealDeal: true
+      },
 // ... (other real deals remain unchanged)
 // Startup Aotearoa exclusives (updated with dual categories)
 {
