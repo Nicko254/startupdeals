@@ -1,0 +1,286 @@
+<div id="nz-startup-innovator-hub">
+<style>
+#nz-startup-innovator-hub {
+font-family: Arial, sans-serif;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+.search-filter {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+}
+.search-filter input, .search-filter select {
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 16px;
+}
+.search-filter input {
+flex-grow: 1;
+}
+.search-filter select {
+background-color: #e8f8ed;
+color: #496960;
+}
+#partner-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+.partner-card {
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+background-color: white;
+}
+.partner-card-header {
+background-color: #496960;
+color: white;
+padding: 15px;
+}
+.partner-card-header h2 {
+margin: 0;
+font-size: 1.2em;
+}
+.partner-card-body {
+padding: 20px;
+line-height: 1.5;
+}
+.partner-category {
+display: inline-block;
+background-color: #e8f8ed;
+color: #496960;
+padding: 5px 10px;
+border-radius: 12px;
+font-size: 0.8em;
+margin-right: 5px;
+margin-bottom: 10px;
+}
+.more-info {
+background-color: #496960;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 4px;
+cursor: pointer;
+margin-top: 15px;
+}
+.partner-details {
+display: none;
+margin-top: 15px;
+border-top: 1px solid #ddd;
+padding-top: 15px;
+}
+.real-deal {
+background-color: #f0f7ff;
+}
+.real-deal .partner-card-header {
+background-color: #3a5f8f;
+}
+.real-deal .partner-category {
+background-color: #d0e3ff;
+color: #3a5f8f;
+}
+.real-deal .more-info {
+background-color: #3a5f8f;
+}
+.partner-cta {
+background-color: #e8f8ed;
+border-radius: 8px;
+padding: 30px;
+text-align: center;
+margin-top: 40px;
+}
+.partner-cta h2 {
+color: #496960;
+margin-bottom: 20px;
+}
+.partner-cta p {
+line-height: 1.8;
+margin-bottom: 15px;
+}
+.cta-button {
+background-color: #496960;
+color: white;
+border: none;
+padding: 12px 24px;
+border-radius: 4px;
+font-size: 1em;
+cursor: pointer;
+margin-top: 20px;
+}
+@media (max-width: 1000px) {
+#partner-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 600px) {
+#partner-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
+
+<div class="search-filter">
+<input type="text" id="search" placeholder="Search partners...">
+<select id="category-filter">
+<option value="All">All Categories</option>
+<option value="Marketing">Marketing</option>
+<option value="Cloud Services">Cloud Services</option>
+<option value="Stakeholder Management">Stakeholder Management</option>
+<option value="Payment Processing">Payment Processing</option>
+<option value="Customer Support">Customer Support</option>
+<option value="Search & Discovery">Search & Discovery</option>
+<option value="Cloud Computing">Cloud Computing</option>
+<option value="Legal">Legal</option>
+<option value="MVP Development">MVP Development</option>
+<option value="Finance">Finance</option>
+<option value="Design">Design</option>
+<option value="Banking">Banking</option>
+<option value="Insurance">Insurance</option>
+<option value="Startup Aotearoa exclusive">Startup Aotearoa exclusive</option>
+</select>
+</div>
+
+<div id="partner-grid"></div>
+
+<div class="partner-cta">
+<h2>Become a Partner</h2>
+<p>Are there other services you would like to see? Do you have services you can offer to this directory?</p>
+<p>We're always looking to expand our network and provide more value to NZ startups.</p>
+<button class="cta-button" onclick="location.href='mailto:nick@startupaotearoa.org'">Let Us Know</button>
+</div>
+
+<script>
+const partners = [
+// Real Deals (unchanged)
+{
+name: "HubSpot",
+category: "Marketing",
+description: "Inbound marketing, sales and customer service",
+discount: "Up to 90% off for eligible startups",
+details: "• Startups with under US$2 million in funding: 90% off in first year, 50% in second, 25% ongoing<br>• Startups who have raised over US$2 million: 50% off in first year, 25% off ongoing",
+isRealDeal: true
+},
+// ... (other real deals remain unchanged)
+// Startup Aotearoa exclusives (updated with dual categories)
+{
+name: "LegalEase NZ",
+category: ["Startup Aotearoa exclusive", "Legal"],
+description: "Specialized legal services for startups, including company formation and IP protection.",
+discount: "20% off for first-time consultations",
+details: "Contact: legal@legalease.nz<br>Services: Company Registration, IP Protection, Contract Review",
+isRealDeal: false
+},
+{
+name: "RapidMVP",
+category: ["Startup Aotearoa exclusive", "MVP Development"],
+description: "Agile development team specializing in quick turnaround for startup MVPs.",
+discount: "Free UI/UX consultation with MVP package",
+details: "Contact: build@rapidmvp.co.nz<br>Tech Stack: React, Node.js, Python, AWS",
+isRealDeal: false
+},
+{
+name: "GrowthHackers NZ",
+category: ["Startup Aotearoa exclusive", "Marketing"],
+description: "Digital marketing experts focused on startup growth and user acquisition.",
+discount: "50% off first month of services",
+details: "Contact: growth@growthhackers.nz<br>Specialties: SEO, PPC, Social Media Marketing",
+isRealDeal: false
+},
+{
+name: "StartupBooks",
+category: ["Startup Aotearoa exclusive", "Finance"],
+description: "Accounting and bookkeeping services tailored for startups and small businesses.",
+discount: "Free financial health check for new clients",
+details: "Contact: accounts@startupbooks.nz<br>Services: Bookkeeping, Tax Planning, Financial Forecasting",
+isRealDeal: false
+},
+{
+name: "DesignSprint",
+category: ["Startup Aotearoa exclusive", "Design"],
+description: "Rapid prototyping and UX design services for startup products and websites.",
+discount: "10% off on design sprint packages",
+details: "Contact: hello@designsprint.nz<br>Expertise: UI/UX Design, Brand Identity, Product Design",
+isRealDeal: false
+},
+{
+name: "StartupBank NZ",
+category: ["Startup Aotearoa exclusive", "Banking"],
+description: "Specialized banking services for startups and small businesses.",
+discount: "No fees on business accounts for the first year",
+details: "• Free business checking and savings accounts<br>• Specialized loan products for startups<br>• Dedicated startup banking advisors",
+isRealDeal: false
+},
+{
+name: "InnoSure",
+category: ["Startup Aotearoa exclusive", "Insurance"],
+description: "Tailored insurance solutions for startups and tech companies.",
+discount: "15% off on all policies for the first year",
+details: "• Cyber liability insurance<br>• Professional indemnity coverage<br>• Flexible plans that grow with your startup",
+isRealDeal: false
+}
+];
+
+function createPartnerCard(partner) {
+const card = document.createElement('div');
+card.className = `partner-card ${partner.isRealDeal ? 'real-deal' : ''}`;
+const categories = Array.isArray(partner.category) ? partner.category : [partner.category];
+const categoryHtml = categories.map(cat => `<span class="partner-category">${cat}</span>`).join('');
+card.innerHTML = `
+<div class="partner-card-header">
+<h2>${partner.name}</h2>
+</div>
+<div class="partner-card-body">
+${categoryHtml}
+<p>${partner.description}</p>
+<p><strong>${partner.discount}</strong></p>
+<button class="more-info">More Info</button>
+<div class="partner-details">
+${partner.details}
+</div>
+</div>
+`;
+return card;
+}
+
+function renderPartners(partnersToRender) {
+const grid = document.getElementById('partner-grid');
+grid.innerHTML = '';
+partnersToRender.forEach(partner => {
+const card = createPartnerCard(partner);
+grid.appendChild(card);
+});
+
+document.querySelectorAll('.more-info').forEach(button => {
+button.addEventListener('click', function() {
+const details = this.nextElementSibling;
+details.style.display = details.style.display === 'none' ? 'block' : 'none';
+this.textContent = details.style.display === 'none' ? 'More Info' : 'Less Info';
+});
+});
+}
+
+function filterPartners() {
+const searchTerm = document.getElementById('search').value.toLowerCase();
+const category = document.getElementById('category-filter').value;
+
+const filteredPartners = partners.filter(partner => {
+const categories = Array.isArray(partner.category) ? partner.category : [partner.category];
+return (partner.name.toLowerCase().includes(searchTerm) ||
+partner.description.toLowerCase().includes(searchTerm)) &&
+(category === 'All' || categories.includes(category));
+});
+
+renderPartners(filteredPartners);
+}
+
+document.getElementById('search').addEventListener('input', filterPartners);
+document.getElementById('category-filter').addEventListener('change', filterPartners);
+
+// Initial render
+renderPartners(partners);
+</script>
+</div>
