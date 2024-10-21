@@ -150,7 +150,7 @@ grid-template-columns: 1fr;
 <h2>Become a Partner</h2>
 <p>Are there other services you would like to see? Do you have services you can offer to this directory?</p>
 <p>We're always looking to expand our network and provide more value to NZ startups.</p>
-<button class="cta-button" onclick="location.href='mailto:nick@startupaotearoa.org'">Let Us Know</button>
+<button class="cta-button" onclick="location.href='mailto:nick.larsen@startupaotearoa.org'">Let Us Know</button>
 </div>
 
 <script>
