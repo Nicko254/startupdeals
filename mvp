@@ -151,7 +151,7 @@ grid-template-columns: 1fr;
 </div>
 <script>
 const partners = [
-// Startup Aotearoa exclusives (updated with dual categories)
+// Non-Real Deals First
 {
 name: "LegalEase NZ",
 category: ["Startup Aotearoa exclusive", "Legal"],
@@ -177,12 +177,12 @@ details: "Contact: growth@growthhackers.nz<br>Specialties: SEO, PPC, Social Medi
 isRealDeal: false
 },
 {
-  name: "CodeMentor",
-  category: ["Tech Skills", "Mentorship"],
-  description: "One-on-one mentorship and coding guidance for beginner and intermediate developers.",
-  discount: "15% off on first 3 sessions",
-  details: "Contact: support@codementor.io<br>Expertise: Full-Stack Development, Problem Solving, Career Advice",
-  isRealDeal: true
+name: "CodeMentor",
+category: ["Tech Skills", "Mentorship"],
+description: "One-on-one mentorship and coding guidance for beginner and intermediate developers.",
+discount: "15% off on first 3 sessions",
+details: "Contact: support@codementor.io<br>Expertise: Full-Stack Development, Problem Solving, Career Advice",
+isRealDeal: false
 },
 {
 name: "StartupBooks",
@@ -216,7 +216,7 @@ discount: "15% off on all policies for the first year",
 details: "• Cyber liability insurance<br>• Professional indemnity coverage<br>• Flexible plans that grow with your startup",
 isRealDeal: false
 },
-// Real Deals (unchanged)
+// Real Deals After
 {
 name: "HubSpot",
 category: "Marketing",
@@ -272,8 +272,9 @@ description: "On-demand cloud computing platforms",
 discount: "Up to US$100,000 worth of AWS Activate credit",
 details: "• Receive up to US$100,000 worth of AWS Activate credit and elevated support via AWS Business Support. Credits expire after 1 or 2 years<br>• For Series A and earlier startups<br>• Receive also AWS Business or AWS Developer Support for 1 year from AWS experts, including architectural guidance and best practices as you build and test",
 isRealDeal: true
-      },
+}
 ];
+
 function createPartnerCard(partner) {
 const card = document.createElement('div');
 card.className = `partner-card ${partner.isRealDeal ? 'real-deal' : ''}`;
@@ -295,6 +296,7 @@ ${partner.details}
 `;
 return card;
 }
+
 function renderPartners(partnersToRender) {
 const grid = document.getElementById('partner-grid');
 grid.innerHTML = '';
@@ -310,6 +312,7 @@ this.textContent = details.style.display === 'none' ? 'More Info' : 'Less Info';
 });
 });
 }
+
 function filterPartners() {
 const searchTerm = document.getElementById('search').value.toLowerCase();
 const category = document.getElementById('category-filter').value;
@@ -321,8 +324,10 @@ partner.description.toLowerCase().includes(searchTerm)) &&
 });
 renderPartners(filteredPartners);
 }
+
 document.getElementById('search').addEventListener('input', filterPartners);
 document.getElementById('category-filter').addEventListener('change', filterPartners);
+
 // Initial render
 renderPartners(partners);
 </script>
