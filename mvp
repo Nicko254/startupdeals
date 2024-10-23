@@ -157,7 +157,7 @@ const partners = [
 name: "LegalEase NZ",
 category: ["Startup Aotearoa exclusive", "Legal"],
 description: "Specialized legal services for startups, including company formation and IP protection.",
-discount: "20% off for first-time consultations",
+discount: "First 2 consultations free",
 details: "Contact: legal@legalease.nz<br>Services: Company Registration, IP Protection, Contract Review",
 isRealDeal: false
 },
@@ -173,7 +173,7 @@ isRealDeal: false
 name: "GrowthHackers NZ",
 category: ["Startup Aotearoa exclusive", "Marketing"],
 description: "Digital marketing experts focused on startup growth and user acquisition.",
-discount: "50% off first month of services",
+discount: "Two months of free services",
 details: "Contact: growth@growthhackers.nz<br>Specialties: SEO, PPC, Social Media Marketing",
 isRealDeal: false
 },
@@ -181,7 +181,7 @@ isRealDeal: false
 name: "CodeMentor",
 category: ["Tech Skills", "Mentorship"],
 description: "One-on-one mentorship and coding guidance for beginner and intermediate developers.",
-discount: "15% off on first 3 sessions",
+discount: "Three months free support",
 details: "Contact: support@codementor.io<br>Expertise: Full-Stack Development, Problem Solving, Career Advice",
 isRealDeal: false
 },
@@ -197,7 +197,7 @@ isRealDeal: false
 name: "DesignSprint",
 category: ["Startup Aotearoa exclusive", "Design"],
 description: "Rapid prototyping and UX design services for startup products and websites.",
-discount: "10% off on design sprint packages",
+discount: "70% off on design sprint packages",
 details: "Contact: hello@designsprint.nz<br>Expertise: UI/UX Design, Brand Identity, Product Design",
 isRealDeal: false
 },
@@ -213,7 +213,7 @@ isRealDeal: false
 name: "InnoSure",
 category: ["Startup Aotearoa exclusive", "Insurance"],
 description: "Tailored insurance solutions for startups and tech companies.",
-discount: "15% off on all policies for the first year",
+discount: "50% off on all policies for the first year",
 details: "• Cyber liability insurance<br>• Professional indemnity coverage<br>• Flexible plans that grow with your startup",
 isRealDeal: false
 },
