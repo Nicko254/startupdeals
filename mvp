@@ -317,17 +317,52 @@ this.textContent = details.style.display === 'none' ? 'More Info' : 'Less Info';
 function filterPartners() {
 const searchTerm = document.getElementById('search').value.toLowerCase();
 const category = document.getElementById('category-filter').value;
+const showExclusiveOnly = document.getElementById('exclusive-filter').checked;
+
 const filteredPartners = partners.filter(partner => {
 const categories = Array.isArray(partner.category) ? partner.category : [partner.category];
-return (partner.name.toLowerCase().includes(searchTerm) ||
-partner.description.toLowerCase().includes(searchTerm)) &&
-(category === 'All' || categories.includes(category));
+const matchesSearch = partner.name.toLowerCase().includes(searchTerm) ||
+                     partner.description.toLowerCase().includes(searchTerm);
+const matchesCategory = category === 'All' || categories.includes(category);
+const matchesExclusive = !showExclusiveOnly || categories.includes('Startup Aotearoa exclusive');
+
+return matchesSearch && matchesCategory && matchesExclusive;
 });
+
 renderPartners(filteredPartners);
 }
 
+// Add this to your HTML at the top, next to the other filters:
+document.querySelector('.search-filter').insertAdjacentHTML('beforeend', `
+<label class="exclusive-filter-label">
+<input type="checkbox" id="exclusive-filter">
+Show Exclusive Deals Only
+</label>
+`);
+
+// Add this to your existing styles:
+document.head.insertAdjacentHTML('beforeend', `
+<style>
+.exclusive-filter-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    background-color: #e8f8ed;
+    border-radius: 4px;
+    color: #496960;
+    cursor: pointer;
+}
+
+.exclusive-filter-label input {
+    margin: 0;
+}
+</style>
+`);
+
 document.getElementById('search').addEventListener('input', filterPartners);
 document.getElementById('category-filter').addEventListener('change', filterPartners);
+document.getElementById('exclusive-filter').addEventListener('change', filterPartners);
 
 // Initial render
 renderPartners(partners);
