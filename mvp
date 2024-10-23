@@ -126,6 +126,7 @@ grid-template-columns: 1fr;
 <input type="text" id="search" placeholder="Search partners...">
 <select id="category-filter">
 <option value="All">All Categories</option>
+<option value="Startup Aotearoa exclusive">Startup Aotearoa exclusive</option>
 <option value="Marketing">Marketing</option>
 <option value="Cloud Services">Cloud Services</option>
 <option value="Stakeholder Management">Stakeholder Management</option>
@@ -139,7 +140,7 @@ grid-template-columns: 1fr;
 <option value="Design">Design</option>
 <option value="Banking">Banking</option>
 <option value="Insurance">Insurance</option>
-<option value="Startup Aotearoa exclusive">Startup Aotearoa exclusive</option>
+
 </select>
 </div>
 <div id="partner-grid"></div>
